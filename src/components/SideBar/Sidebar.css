@@ -65,3 +65,12 @@ nav ul li span {
 .sidebar.collapsed .toggle-button {
   margin: 0;
 }
+.sidebar-footer {
+  position: absolute; /* Định vị nút ở dưới cùng */
+  bottom: 0;
+  left: 10;
+ /* Chiếm toàn bộ chiều ngang sidebar */
+  text-align: center;
+
+
+}

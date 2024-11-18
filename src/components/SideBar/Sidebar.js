@@ -28,39 +28,35 @@ function Sidebar() {
         <ul>
           <li>
             <FaHome />
-            {!isCollapsed && <span>Home</span>}
+            {!isCollapsed && <span>Hồ sơ nhân viên</span>}
           </li>
           <li>
             <FaStickyNote />
-            {!isCollapsed && <span>Notes</span>}
+            {!isCollapsed && <span>Hồ sơ lương</span>}
           </li>
           <li>
             <FaComments />
-            {!isCollapsed && <span>Chat</span>}
+            {!isCollapsed && <span>Thông tin hợp đồng</span>}
           </li>
           <li>
             <FaUserFriends />
-            {!isCollapsed && <span>Contacts</span>}
+            {!isCollapsed && <span>Quá trình công tác</span>}
           </li>
           <li>
             <FaCalendarAlt />
-            {!isCollapsed && <span>Calendar</span>}
+            {!isCollapsed && <span>Quản lý nghỉ</span>}
           </li>
           <li>
             <FaEnvelope />
-            {!isCollapsed && <span>Messages</span>}
+            {!isCollapsed && <span>Quản lý làm thêm</span>}
           </li>
           <li>
             <FaCog />
             {!isCollapsed && <span>Settings</span>}
           </li>
-          <li>
-            <FaShoppingCart />
-            {!isCollapsed && <span>Shop</span>}
-          </li>
         </ul>
       </nav>
-      <div className="footer">
+      <div className="sidebar-footer">
         <button onClick={toggleSidebar} className="toggle-button">
           {isCollapsed ? '☰' : '✕'}
         </button>
