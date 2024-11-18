@@ -2,6 +2,8 @@ import './App.scss';
 import { ToastContainer } from 'react-toastify';
 import { Route, Routes, Link } from "react-router-dom";
 import Nav from './components/Navigation/Nav';
+import Header from './components/Header';
+import Sidebar from './components/SideBar/Sidebar';
 import Container from 'react-bootstrap/Container';
 import Login from './components/Login';
 import { useState } from 'react';
@@ -21,18 +23,28 @@ function App() {
 
   return (
     <>
-      <div className='app-header'>
-        <Nav />
-      </div>
-      <div className='app-container'>
-        {/* {account && !_.isEmpty(account) && account.isAuthenticated && <Nav />} */}
-        {/* <Header /> */}
-        {/* <Container> */}
+    <div className="app">
+      
+      {/* {window.location.pathname == '/Login' ? (
+        
         <AppRoutes />
-        {/* </Container> */}
-
-
+      ) : (
+        <>
+          <Nav />
+          <div className="main-layout">
+            <Sidebar />
+      
+          </div>
+        </>
+      )} */}
+    
+      <Nav />
+      <div className="main-layout">
+        <Sidebar />
+        <AppRoutes />
       </div>
+      {/* <Footer /> */}
+    </div>
       <ToastContainer
         position="bottom-center"
         autoClose={5000}

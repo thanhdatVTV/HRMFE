@@ -1,0 +1,67 @@
+.sidebar {
+  width: 20em;
+  background-color: #f0f0f0;
+  padding-left: 10px;
+  color: #333;
+  transition: width 0.3s;
+}
+
+.sidebar.collapsed {
+  width: 60px;
+}
+
+.profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-right: 10px;
+  padding-top: 15px;
+}
+
+.profile img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.profile h4 {
+  display: block;
+}
+
+.sidebar.collapsed .profile h4 {
+  display: none;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+nav ul li {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  cursor: pointer;
+}
+
+nav ul li span {
+  margin-left: 10px;
+}
+
+.sidebar.collapsed nav ul li span {
+  display: none; /* Hide text labels when sidebar is collapsed */
+}
+
+.toggle-button {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.sidebar.collapsed .toggle-button {
+  margin: 0;
+}
