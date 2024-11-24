@@ -1,8 +1,33 @@
-import React, { useState } from "react";
-import { useLocation, NavLink, useNavigate } from 'react-router-dom';
-import './Registerleave.css';
+import React, { useState, useEffect } from "react";
+import { useLocation, NavLink, useNavigate } from "react-router-dom";
+import "./Registerleave.css";
+
 const LeaveRegistration = () => {
   const [data, setData] = useState([]);
+  useEffect(() => {
+    // Fake data for demonstration purposes
+    const fakeData = [
+      {
+        employeeId: "E001",
+        employeeName: "Nguyen Van A",
+        position: "Developer",
+        department: "IT",
+        startDate: "2023-01-01",
+        endDate: "2023-01-10",
+      },
+      {
+        employeeId: "E002",
+        employeeName: "Tran Thi B",
+        position: "Designer",
+        department: "Design",
+        startDate: "2023-02-01",
+        endDate: "2023-02-05",
+      },
+      // Add more fake data as needed
+    ];
+    setData(fakeData);
+  }, []);
+
   const [itemsPerPage, setItemsPerPage] = useState(50);
   const [currentPage, setCurrentPage] = useState(1);
 
@@ -10,7 +35,29 @@ const LeaveRegistration = () => {
 
   return (
     <div className="leave-management">
-      <h2>QUẢN LÝ NGHỈ</h2>
+      <div class="toolbar">
+  <div class="toolbar-title">
+    QUẢN LÝ NGHỈ
+  </div>
+  <div class="toolbar-icons">
+  <button>
+      <i class="fas fa-plus"></i> Thêm mới
+    </button>
+    <button>
+      <i class="fas fa-edit"></i> Sửa
+    </button>
+    <button>
+      <i class="fas fa-trash-alt"></i> Xóa
+    </button>
+    <button>
+      <i class="fas fa-search"></i> Tìm kiếm
+    </button>
+  </div>
+</div>
+
+
+     
+
       <div className="table-container">
         <table className="leave-table">
           <thead>
@@ -58,7 +105,7 @@ const LeaveRegistration = () => {
       <div className="pagination">
         <div className="pagination-controls">
           <label>
-            Hiển thị
+            Hiển thị &nbsp;
             <select
               value={itemsPerPage}
               onChange={(e) => setItemsPerPage(Number(e.target.value))}
@@ -68,9 +115,7 @@ const LeaveRegistration = () => {
               <option value={50}>50</option>
             </select>
           </label>
-          <span>
-            {` ${data.length} kết quả`}
-          </span>
+          <span>{` ${data.length} kết quả`}</span>
         </div>
         <div className="pagination-buttons">
           <button
