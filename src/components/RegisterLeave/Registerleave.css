@@ -28,8 +28,12 @@ h2 {
 .leave-table th,
 .leave-table td {
   border-bottom: 1px solid #ddd;
-  padding: 8px;
+  width: 250px;
   text-align: left;
+  line-height: 46px;
+  padding: 0px 12px;
+  font-size: 13px;
+  font-weight: 500;
 }
 
 .leave-table th {
@@ -80,7 +84,7 @@ h2 {
 
 .toolbar button {
   background-color: #ffffff;
-  color: #007bff;
+/*   color: #007bff; */
   border: none;
   /* padding: 10px 15px; */
   /* border-radius: 5px; */
@@ -134,4 +138,7 @@ h2 {
     text-wrap: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+}
+.fa-solid, .fas {
+  color: blue;
 }

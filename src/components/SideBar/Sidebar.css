@@ -9,7 +9,10 @@
 .sidebar.collapsed {
   width: 70px;
 }
-
+a {
+  color: white !important;
+  text-decoration: none !important;
+}
 .profile {
   display: flex;
   flex-direction: column;

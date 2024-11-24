@@ -7,7 +7,7 @@ import { useEffect, useState, useContext } from 'react';
 const Header = (props) => {
   const { user, logoutContext } = useContext(UserContext);
   const location = useLocation();
-  if ((user && user.isAuthenticated === true) || location.pathname === '/') {
+  /* if ((user && user.isAuthenticated === true) || location.pathname === '/') { */
   return (
     <div className="header">
       {/* Logo */}
@@ -46,9 +46,9 @@ const Header = (props) => {
       </div>
     </div>
   );
-} else {
+/* } else {
   return <></>;
-}
+} */
 };
 
 export default Header;
