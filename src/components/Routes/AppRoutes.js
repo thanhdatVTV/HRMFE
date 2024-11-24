@@ -33,6 +33,7 @@ import EduProgram from '../User/EduProgram';
 import ThoiKhoaBieu from '../User/ThoiKhoaBieu';
 import MyCourse from '../User/MyCourse';
 import ViewCourse from '../User/ViewCourse';
+import LeaveRegistration  from '../RegisterLeave/RegisterLeave';
 
 const AppRoutes = () => {
   const { user } = useContext(UserContext);
@@ -95,6 +96,7 @@ const AppRoutes = () => {
           <Route path="/phancongmonhoc/:MaDDK" element={<TablePhanCongMonHoc />} />
           <Route path="/dotdangkysinhvien" element={<TableDotDangKySinhVien />} />
           <Route path="/dangkymonhoc/:MaDDK" element={<TableDangKyMonHoc />} />
+          <Route path="/registerLeave" element={<LeaveRegistration />} />
 
         </Routes>
       </>
@@ -105,6 +107,8 @@ const AppRoutes = () => {
         <Routes>
           <Route path="/" exact element={<Default />} />
           <Route path="/Login" element={<LoginNew />} />
+          <Route path="/registerLeave" element={<LeaveRegistration />} />
+          <Route path="/nhomlop" element={<TableNhomLop />} />
         </Routes>
       </>
     );

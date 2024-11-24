@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { FaUsers, FaStickyNote,FaWallet,FaFileContract, FaComments, FaUserFriends, FaCalendarAlt, FaEnvelope, FaCog, FaShoppingCart } from 'react-icons/fa';
 import './Sidebar.css';
-import { useLocation } from 'react-router-dom';
+import { useLocation,Link } from 'react-router-dom';
 import leftNav from '../../assets/images/leftNav.png';
 import rightNav from '../../assets/images/rightNav.png';
 import FeatherIcon from 'feather-icons-react';
@@ -25,13 +25,15 @@ function Sidebar() {
       
       <div className="profile">
         <img src="https://materialpro-react-main.netlify.app/assets/user4-CwbtKSXY.jpg" alt="Profile" />
-        {!isCollapsed && <h4>Steave Rojer</h4>}
+        {!isCollapsed && <h4>Võ Nhật Anh</h4>}
       </div>
       <nav>
         <ul>
           <li>
+          <Link to="/nhomlop">
             <FaUsers />
             {!isCollapsed && <span>Hồ sơ nhân viên</span>}
+            </Link>
           </li>
           <li>
             <FaWallet />
@@ -46,8 +48,10 @@ function Sidebar() {
             {!isCollapsed && <span>Quá trình công tác</span>}
           </li>
           <li>
+            <Link to="/registerLeave">
             <FaCalendarAlt />
             {!isCollapsed && <span>Quản lý nghỉ</span>}
+            </Link>
           </li>
           <li>
             <FaEnvelope />

@@ -32,7 +32,7 @@ const Header = (props) => {
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="me-auto">
-                            <NavLink to="/" className="nav-link">Home</NavLink>
+                            <NavLink to="/registerLeave" className="nav-link">Home</NavLink>
                             <NavLink to="/users" className="nav-link">Manage Users</NavLink>
                             <NavLink to="/upload" className="nav-link">Upload</NavLink>
                         </Nav>
