@@ -2,7 +2,7 @@ import './App.scss';
 import { ToastContainer } from 'react-toastify';
 import { Route, Routes, Link } from "react-router-dom";
 import Nav from './components/Navigation/Nav';
-import Header from './components/Header';
+import Header from './components/Header/Header';
 import Sidebar from './components/SideBar/Sidebar';
 import Container from 'react-bootstrap/Container';
 import Login from './components/Login';
@@ -38,7 +38,7 @@ function App() {
         </>
       )} */}
     
-      <Nav />
+      <Header  />
       <div className="main-layout">
         <Sidebar />
         <AppRoutes />

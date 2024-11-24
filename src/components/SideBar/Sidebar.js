@@ -1,8 +1,11 @@
 import React, { useState } from 'react';
-import { FaHome, FaStickyNote, FaComments, FaUserFriends, FaCalendarAlt, FaEnvelope, FaCog, FaShoppingCart } from 'react-icons/fa';
+import { FaUsers, FaStickyNote,FaWallet,FaFileContract, FaComments, FaUserFriends, FaCalendarAlt, FaEnvelope, FaCog, FaShoppingCart } from 'react-icons/fa';
 import './Sidebar.css';
 import { useLocation } from 'react-router-dom';
-
+import leftNav from '../../assets/images/leftNav.png';
+import rightNav from '../../assets/images/rightNav.png';
+import FeatherIcon from 'feather-icons-react';
+import { svgProfile } from '../../components/svgCustom/svgCustom';
 function Sidebar() {
   const [isCollapsed, setIsCollapsed] = useState(false);
 
@@ -27,15 +30,15 @@ function Sidebar() {
       <nav>
         <ul>
           <li>
-            <FaHome />
+            <FaUsers />
             {!isCollapsed && <span>Hồ sơ nhân viên</span>}
           </li>
           <li>
-            <FaStickyNote />
+            <FaWallet />
             {!isCollapsed && <span>Hồ sơ lương</span>}
           </li>
           <li>
-            <FaComments />
+            <FaFileContract />
             {!isCollapsed && <span>Thông tin hợp đồng</span>}
           </li>
           <li>
@@ -56,9 +59,42 @@ function Sidebar() {
           </li>
         </ul>
       </nav>
+
       <div className="sidebar-footer">
         <button onClick={toggleSidebar} className="toggle-button">
-          {isCollapsed ? '☰' : '✕'}
+          {isCollapsed ? 
+             <svg
+             xmlns="http://www.w3.org/2000/svg"
+             width="24"
+             height="24"
+             viewBox="0 0 24 24"
+             fill="none"
+             stroke="white"
+             strokeWidth="2"
+             strokeLinecap="round"
+             strokeLinejoin="round"
+             className="feather feather-chevrons-right"
+           >
+             <polyline points="13 17 18 12 13 7" />
+             <polyline points="6 17 11 12 6 7" />
+           </svg>
+           : 
+           <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="white"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          className="feather feather-chevrons-left"
+        >
+          <polyline points="11 17 6 12 11 7"></polyline>
+          <polyline points="18 17 13 12 18 7"></polyline>
+        </svg>
+           }
         </button>
         {!isCollapsed && <span className="toggle-label">Thu gọn</span>}
       </div>

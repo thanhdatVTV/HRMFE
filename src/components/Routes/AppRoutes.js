@@ -2,6 +2,7 @@ import { Route, Routes, useNavigate, Navigate } from 'react-router-dom';
 import LoginNew from '../../components/Login/Login';
 import Users from '../../components/ManageUsers/Users';
 import Home from '../../components/Home/Home';
+import Default from '../../components/Default/Default';
 import PrivateRoutes from './PrivateRoutes';
 import UploadFile from '../UploadFile/UploadFile';
 import { useContext, useEffect } from 'react';
@@ -59,7 +60,7 @@ const AppRoutes = () => {
       <>
         {/* <PrivateRoutes path="/users" element={Users} /> */}
         <Routes>
-          <Route path="/" exact element={<Home />} />
+          <Route path="/" exact element={<Default />} />
           <Route path="/users" element={<TableUsers />} />
           {/* <Route path="/login" element={<Login />} /> */}
           <Route path="/Login" element={<LoginNew />} />
@@ -102,7 +103,7 @@ const AppRoutes = () => {
     return (
       <>
         <Routes>
-          <Route path="/" exact element={<Home />} />
+          <Route path="/" exact element={<Default />} />
           <Route path="/Login" element={<LoginNew />} />
         </Routes>
       </>

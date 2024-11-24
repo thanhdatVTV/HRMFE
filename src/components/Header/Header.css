@@ -1,0 +1,68 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    padding: 10px 20px;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .header-logo h1 {
+    font-size: 24px;
+    color: #000;
+    font-weight: bold;
+  }
+  
+  .header-logo span {
+    color: orange;
+  }
+  
+  .header-actions {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .header-notification {
+    position: relative;
+  }
+  
+  .notification-icon {
+    font-size: 20px;
+    cursor: pointer;
+  }
+  
+  .notification-count {
+    position: absolute;
+    top: -5px;
+    right: -10px;
+    background-color: red;
+    color: white;
+    font-size: 12px;
+    border-radius: 50%;
+    padding: 2px 6px;
+  }
+  
+  .header-language .flag-icon {
+    width: 30px;
+    height: 20px;
+    cursor: pointer;
+  }
+  
+  .header-user {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .user-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+  }
+  
+  .user-name {
+    font-size: 16px;
+    font-weight: 500;
+  }
+  
